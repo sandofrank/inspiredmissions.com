@@ -1,0 +1,693 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Locally hosted fonts - no external dependencies */
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/inter/800.css';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/playfair-display/800.css';
+
+/* ========================================
+   CSS VARIABLES
+======================================== */
+:root {
+  /* Cambodia-Inspired Color Palette */
+  --primary: #032EA1;
+  --primary-light: #1e5dc7;
+  --primary-dark: #021e6b;
+
+  --secondary: #D4AF37;
+  --secondary-light: #f4cf5d;
+  --secondary-dark: #b8941f;
+
+  --accent: #E00025;
+  --accent-light: #ff1a3d;
+  --accent-dark: #a8001c;
+
+  --background: #ffffff;
+  --foreground: #1f2937;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+}
+
+/* ========================================
+   BASE STYLES
+======================================== */
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+/* ========================================
+   HERO SECTIONS
+======================================== */
+.hero-section {
+  position: relative;
+  min-height: 400px;
+  height: 60vh;
+  max-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section-medium {
+  min-height: 350px;
+  height: 50vh;
+  max-height: 500px;
+}
+
+.hero-section-small {
+  min-height: 300px;
+  height: 40vh;
+  max-height: 400px;
+}
+
+/* Hero Background Images */
+.hero-bg-angkor-wat {
+  background-image: url(/images/hero-angkor-wat.jpg);
+}
+
+.hero-bg-jm8 {
+  background-image: url(/images/about-cambodia/jm8.jpg);
+}
+
+.hero-bg-bibleschool3 {
+  background-image: url(/images/about-cambodia/bibleschool3.jpg);
+}
+
+.hero-bg-support03 {
+  background-image: url(/images/about-cambodia/support-03.jpg);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.hero-overlay-strong {
+  opacity: 0.85;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: #f3f4f6;
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   LAYOUT & CONTAINERS
+======================================== */
+.page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content-section {
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.content-wrapper {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+/* ========================================
+   SECTION STYLES
+======================================== */
+.section-bg-dots {
+  background-color: var(--gray-200);
+  background-image: radial-gradient(rgba(3, 46, 161, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  margin: 0 -1rem 2rem -1rem;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-bg-dots {
+    margin: 0 -2rem 2rem -2rem;
+    padding: 2.5rem 2rem;
+  }
+}
+
+.section-bg-blue {
+  background-color: #dbeafe;
+  margin: 0 -1rem 2rem -1rem;
+  padding: 2rem 1rem;
+  border-radius: 0 1rem 1rem 0;
+  border-left: 5px solid var(--primary);
+  box-shadow: 0 4px 12px rgba(3, 46, 161, 0.1);
+}
+
+@media (min-width: 768px) {
+  .section-bg-blue {
+    margin: 0 -2rem 2rem -2rem;
+    padding: 2.5rem 2rem;
+  }
+}
+
+.section-bg-red {
+  background-color: #fee2e2;
+  margin: 0 -1rem 2rem -1rem;
+  padding: 2rem 1rem;
+  border-radius: 0 1rem 1rem 0;
+  border-left: 5px solid var(--accent);
+  box-shadow: 0 4px 12px rgba(224, 0, 37, 0.1);
+}
+
+@media (min-width: 768px) {
+  .section-bg-red {
+    margin: 0 -2rem 2rem -2rem;
+    padding: 2.5rem 2rem;
+  }
+}
+
+.section-heading-accent {
+  position: relative;
+  padding-top: 1.5rem;
+  display: block;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.section-heading-accent::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+  border-radius: 2px;
+}
+
+/* When used inside text-center, center the accent bar */
+.text-center .section-heading-accent::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ========================================
+   SECTION CONTENT WRAPPER
+======================================== */
+.section-content {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: clamp(1.875rem, 3vw, 2.25rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--gray-900);
+}
+
+.section-intro {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: var(--gray-700);
+  margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   TYPOGRAPHY & PROSE
+======================================== */
+.blog-article {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.prose {
+  color: var(--gray-800);
+  max-width: 56rem;
+  margin: 0 auto;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.prose h2 {
+  color: var(--primary-dark);
+  font-size: 1.875rem;
+  margin-top: 2rem;
+  margin-bottom: 0.875rem;
+  max-width: 56rem;
+}
+
+.prose h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.625rem;
+  max-width: 56rem;
+}
+
+.prose h4 {
+  color: var(--gray-900);
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  max-width: 56rem;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+  max-width: 56rem;
+}
+
+.prose ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  max-width: 56rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+  line-height: 1.65;
+}
+
+.prose li:last-child {
+  margin-bottom: 0;
+}
+
+.prose strong {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.prose a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: var(--secondary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.prose a:hover {
+  color: var(--primary-light);
+  text-decoration-color: var(--secondary-light);
+}
+
+.prose img {
+  border-radius: 0.75rem;
+  margin: 1.5rem auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+.prose blockquote {
+  border-left: 4px solid var(--secondary);
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--gray-700);
+  margin: 1.25rem 0;
+  max-width: 56rem;
+}
+
+/* ========================================
+   IMAGE GRIDS
+======================================== */
+.image-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1.5rem auto;
+  max-width: 56rem;
+}
+
+.image-grid-2 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .image-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.image-grid-3 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .image-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.image-grid-item {
+  position: relative;
+  height: 16rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image-hero {
+  position: relative;
+  height: 24rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  margin: 1.5rem auto;
+  max-width: 56rem;
+}
+
+/* ========================================
+   TEXT UTILITIES
+======================================== */
+.text-accent-gold {
+  color: var(--secondary);
+}
+
+.text-primary-blue {
+  color: var(--primary);
+}
+
+.text-primary-dark {
+  color: var(--primary-dark);
+}
+
+.text-secondary-dark {
+  color: var(--secondary-dark);
+}
+
+.text-secondary-color {
+  color: var(--secondary);
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+  color: var(--primary-dark);
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
+  background: linear-gradient(135deg, var(--secondary-light) 0%, var(--secondary) 100%);
+}
+
+/* ========================================
+   CARDS & HOVER EFFECTS
+======================================== */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.card-border-blue {
+  border-top: 4px solid var(--primary);
+}
+
+.card-border-gold {
+  border-top: 4px solid var(--secondary);
+}
+
+.card-border-red {
+  border-top: 4px solid var(--accent);
+}
+
+.info-box {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.info-box-primary {
+  background-color: rgba(3, 46, 161, 0.05);
+  border-left: 4px solid var(--primary);
+}
+
+.info-box-secondary {
+  background-color: rgba(212, 175, 55, 0.05);
+  border-left: 4px solid var(--secondary);
+}
+
+.info-box-accent {
+  background-color: rgba(224, 0, 37, 0.05);
+  border-left: 4px solid var(--accent);
+}
+
+/* ========================================
+   GRADIENTS
+======================================== */
+.gradient-hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.gradient-overlay-dark {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+}
+
+/* ========================================
+   ICON UTILITIES
+======================================== */
+.icon-primary {
+  color: var(--primary);
+}
+
+.icon-secondary {
+  color: var(--secondary);
+}
+
+.icon-accent {
+  color: var(--accent);
+}
+
+.bg-icon-primary {
+  background-color: rgba(3, 46, 161, 0.1);
+}
+
+.bg-icon-secondary {
+  background-color: rgba(212, 175, 55, 0.1);
+}
+
+.bg-icon-accent {
+  background-color: rgba(224, 0, 37, 0.1);
+}
+
+/* ========================================
+   BORDER UTILITIES
+======================================== */
+.border-left-primary {
+  border-left: 4px solid var(--primary);
+}
+
+.border-left-secondary {
+  border-left: 4px solid var(--secondary);
+}
+
+.border-left-accent {
+  border-left: 4px solid var(--accent);
+}
+
+.border-left-primary-color {
+  border-left-color: var(--primary);
+}
+
+/* ========================================
+   UTILITY CLASSES
+======================================== */
+.text-shadow {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.text-shadow-strong {
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.pattern-dots {
+  background-image: radial-gradient(rgba(3, 46, 161, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+/* Screen reader only - hide visually but available to assistive tech */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Show element when focused - for skip links */
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Enhanced focus indicators for better keyboard navigation */
+*:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Focus styles for links */
+a:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 3px;
+}
+
+/* Focus styles for buttons */
+button:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+/* Focus styles for interactive elements in header */
+header a:focus-visible,
+header button:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+/* Ensure current page indicator is visible */
+[aria-current="page"] {
+  position: relative;
+  font-weight: 700;
+}
+
+[aria-current="page"]::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--secondary);
+  border-radius: 1px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
