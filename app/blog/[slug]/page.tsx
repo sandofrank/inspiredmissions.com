@@ -22,8 +22,7 @@ import {
 } from '@/components/BlogIcons'
 
 const Gallery = dynamic(() => import('@/components/Gallery'), {
-  loading: () => <div className="h-64 bg-gray-200 animate-pulse rounded-lg my-8" />,
-  ssr: false
+  loading: () => <div className="h-64 bg-gray-200 animate-pulse rounded-lg my-8" />
 })
 
 export async function generateStaticParams() {
