@@ -42,7 +42,7 @@ export async function POST(request: Request) {
       )
     }
 
-    // Generate email HTML (use localhost for now - images need to be on production for email testing)
+    // Generate email HTML with production URL for images
     const emailHtml = generateBlogPostEmail({
       title: post.title,
       excerpt: post.description || '',
@@ -50,7 +50,7 @@ export async function POST(request: Request) {
       slug: post.slug,
       image: post.image,
       content: post.content,
-      baseUrl: 'http://localhost:3000', // For now - switch to https://inspiredmissions.com when images are deployed
+      baseUrl: 'https://inspiredmissions.com',
     })
 
     // Send email to test address only
