@@ -28,15 +28,15 @@ export default function Header() {
       </a>
       {/* Top bar with clock */}
       <div className="border-b border-white/10">
-        <div className="container mx-auto px-4 py-2">
+        <div className="container mx-auto px-6 py-2 md:px-8">
           <div className="flex justify-center md:justify-end">
             <PhnomPenhClock />
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+      <div className="container mx-auto px-6 md:px-8">
+        <div className="flex justify-between items-center py-5 md:py-6">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
             <Image
@@ -111,11 +111,11 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav id="mobile-menu" className="lg:hidden py-4 border-t border-white/20" aria-label="Mobile navigation">
-            <div className="flex flex-col space-y-4">
+          <nav id="mobile-menu" className="lg:hidden py-6 border-t border-white/20" aria-label="Mobile navigation">
+            <div className="flex flex-col space-y-1">
               <Link
                 href="/"
-                className="text-white hover:text-yellow-300 font-medium py-2 transition-colors"
+                className="text-white hover:text-yellow-300 font-medium py-3 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
                 aria-current={isActive('/') ? 'page' : undefined}
               >
@@ -123,7 +123,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/about-cambodia"
-                className="text-white hover:text-yellow-300 font-medium py-2 transition-colors"
+                className="text-white hover:text-yellow-300 font-medium py-3 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
                 aria-current={isActive('/about-cambodia') ? 'page' : undefined}
               >
@@ -131,7 +131,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/history"
-                className="text-white hover:text-yellow-300 font-medium py-2 transition-colors"
+                className="text-white hover:text-yellow-300 font-medium py-3 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
                 aria-current={isActive('/history') ? 'page' : undefined}
               >
@@ -139,7 +139,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/blog"
-                className="text-white hover:text-yellow-300 font-medium py-2 transition-colors"
+                className="text-white hover:text-yellow-300 font-medium py-3 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
                 aria-current={isActive('/blog') ? 'page' : undefined}
               >

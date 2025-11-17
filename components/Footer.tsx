@@ -3,8 +3,8 @@ import NewsletterSignup from './NewsletterSignup'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white mt-20">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-gray-900 text-white mt-12 md:mt-16">
+      <div className="container mx-auto px-6 py-16 md:px-8 md:py-20">
         {/* Newsletter Signup */}
         <div className="mb-12">
           <NewsletterSignup />

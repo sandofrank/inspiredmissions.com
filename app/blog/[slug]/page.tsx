@@ -5,7 +5,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import StructuredData from '@/components/StructuredData'
-import NewsletterSignup from '@/components/NewsletterSignup'
 import {
   IconHeart,
   IconPrayer,
@@ -171,13 +170,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           />
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <NewsletterSignup />
-        </div>
-
         {/* Back to blog CTA */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
+        <div className="mt-16 pt-8 border-t border-gray-200">
           <div className="text-center section-bg-dots py-8">
             <div className="section-heading-accent mb-4">
               <h2 className="text-3xl font-bold">More Stories</h2>

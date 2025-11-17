@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
 import { getAllPosts } from '@/lib/blog'
-import NewsletterSignup from '@/components/NewsletterSignup'
 
 export const metadata: Metadata = {
   title: "Inspired News",
@@ -98,11 +97,6 @@ export default function BlogPage() {
             </div>
           </section>
         )}
-
-        {/* Newsletter Signup */}
-        <section className="content-section">
-          <NewsletterSignup />
-        </section>
       </div>
     </div>
   )
