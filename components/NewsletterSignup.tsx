@@ -84,7 +84,7 @@ export default function NewsletterSignup() {
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="px-6 py-2 text-sm bg-white text-primary font-bold rounded hover:bg-gray-100 hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap border-2 border-white"
+            className="px-6 py-2 text-sm bg-gradient-to-br from-secondary to-accent-gold text-primary-dark font-bold rounded hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
           >
             {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
           </button>
