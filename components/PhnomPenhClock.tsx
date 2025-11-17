@@ -75,19 +75,19 @@ export default memo(function PhnomPenhClock() {
   return (
     <div className="flex items-center gap-4 text-sm">
       <div className="flex items-center gap-2">
-        <svg className="w-4 h-4 text-secondary-color" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
-        <span className="text-gray-200">Phnom Penh:</span>
-        <span className="font-mono font-semibold text-secondary-color">
+        <span className="text-white/80">Phnom Penh:</span>
+        <span className="font-mono font-semibold text-yellow-300">
           {time}
         </span>
       </div>
       {weather && (
-        <div className="flex items-center gap-2 border-l border-gray-600 pl-4">
+        <div className="flex items-center gap-2 border-l border-white/20 pl-4">
           <span className="text-2xl">{weather.icon}</span>
-          <span className="font-semibold text-secondary-color">{weather.temp}°F</span>
-          <span className="text-gray-300">{weather.condition}</span>
+          <span className="font-semibold text-yellow-300">{weather.temp}°F</span>
+          <span className="text-white/80">{weather.condition}</span>
         </div>
       )}
     </div>

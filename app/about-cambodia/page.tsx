@@ -38,9 +38,7 @@ export default function AboutCambodiaPage() {
       <div className="page-container">
         {/* Cambodia Bible College */}
         <section className="content-section">
-          <div className="section-heading-accent">
-            <h2 className="section-title">Cambodia Bible College</h2>
-          </div>
+          <h2 className="section-title">Cambodia Bible College</h2>
           <div className="prose section-content">
             <div className="flex items-start gap-6">
               <div className="flex-1">
@@ -73,9 +71,7 @@ export default function AboutCambodiaPage() {
       {/* Cambodia Children's Home */}
       <section className="section-bg-dots">
         <div className="page-container">
-          <div className="section-heading-accent">
-            <h2 className="section-title">Cambodia Children's Home</h2>
-          </div>
+          <h2 className="section-title">Cambodia Children's Home</h2>
           <div className="image-hero">
             <Image src="/images/about-cambodia/coh.jpg" alt="Children of Hope" fill className="object-cover" sizes="100vw" />
           </div>
@@ -113,9 +109,7 @@ export default function AboutCambodiaPage() {
       <div className="page-container">
         {/* Cambodia Cows */}
         <section className="content-section">
-          <div className="section-heading-accent">
-            <h2 className="section-title">Cambodia Cows</h2>
-          </div>
+          <h2 className="section-title">Cambodia Cows</h2>
           <div className="prose section-content">
             <p className="flex items-start gap-3">
               <svg className="w-6 h-6 icon-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -147,9 +141,7 @@ export default function AboutCambodiaPage() {
       {/* Cambodia Fertilizer */}
       <section className="section-bg-dots">
         <div className="page-container">
-          <div className="section-heading-accent">
-            <h2 className="section-title">Cambodia Fertilizer</h2>
-          </div>
+          <h2 className="section-title">Cambodia Fertilizer</h2>
           <div className="image-hero">
             <Image src="/images/about-cambodia/projectfert-01.jpg" alt="Project Fertilizer" fill className="object-cover" sizes="100vw" />
           </div>
@@ -178,9 +170,7 @@ export default function AboutCambodiaPage() {
       <div className="page-container">
         {/* Cambodia Jungle */}
         <section className="content-section">
-          <div className="section-heading-accent">
-            <h2 className="section-title">Cambodia Jungle</h2>
-          </div>
+          <h2 className="section-title">Cambodia Jungle</h2>
           <div className="prose section-content">
             <div className="flex gap-6 items-start">
               <svg className="w-20 h-20 icon-accent opacity-10 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -213,9 +203,7 @@ export default function AboutCambodiaPage() {
       {/* Cambodia Support */}
       <section className="section-bg-blue">
         <div className="page-container">
-          <div className="section-heading-accent">
-            <h2 className="section-title">The Cost of Ministry</h2>
-          </div>
+          <h2 className="section-title">The Cost of Ministry</h2>
           <div className="prose section-content">
             <div className="flex gap-4 items-start">
               <svg className="w-8 h-8 icon-secondary opacity-20 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">

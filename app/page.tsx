@@ -75,12 +75,10 @@ export default function Home() {
       <div className="page-container">
         {/* Our Purpose Section */}
         <section className="content-section">
-          <div className="text-center mb-8">
-            <div className="section-heading-accent">
-              <span className="font-semibold text-sm uppercase tracking-wider block mb-3 text-accent-gold">What We Do</span>
-              <h2 className="text-4xl md:text-5xl font-bold">Our Purpose</h2>
-            </div>
-            <p className="text-xl text-gray-600 content-wrapper mt-4">
+          <div className="text-center">
+            <span className="font-semibold text-sm uppercase tracking-wider block mb-3 text-accent-gold">What We Do</span>
+            <h2 className="section-title">Our Purpose</h2>
+            <p className="section-subtitle">
               Three pillars guide our mission to transform lives in Cambodia
             </p>
           </div>
@@ -128,12 +126,10 @@ export default function Home() {
       {/* Our Missionaries Section */}
       <section className="section-bg-dots">
         <div className="page-container">
-            <div className="text-center mb-8">
-              <div className="section-heading-accent">
-                <span className="font-semibold text-sm uppercase tracking-wider block mb-3 text-accent-gold">Meet Our Team</span>
-                <h2 className="text-4xl md:text-5xl font-bold">Our Missionaries in Cambodia</h2>
-              </div>
-              <p className="text-xl text-gray-600 content-wrapper mt-4">
+            <div className="text-center">
+              <span className="font-semibold text-sm uppercase tracking-wider block mb-3 text-accent-gold">Meet Our Team</span>
+              <h2 className="section-title">Our Missionaries in Cambodia</h2>
+              <p className="section-subtitle">
                 Dedicated servants bringing hope and transformation to communities across Cambodia
               </p>
             </div>
@@ -208,12 +204,10 @@ export default function Home() {
       <div className="page-container">
         {/* Our Happenings - Featured Blog Posts */}
         <section className="content-section">
-            <div className="text-center mb-8">
-              <div className="section-heading-accent">
-                <span className="font-semibold text-sm uppercase tracking-wider block mb-3 text-accent-gold">Latest Updates</span>
-                <h2 className="text-4xl md:text-5xl font-bold">Our Happenings</h2>
-              </div>
-              <p className="text-xl text-gray-600 content-wrapper mt-4">
+            <div className="text-center">
+              <span className="font-semibold text-sm uppercase tracking-wider block mb-3 text-accent-gold">Latest Updates</span>
+              <h2 className="section-title">Our Happenings</h2>
+              <p className="section-subtitle">
                 Stay connected with our journey and see what God is doing in Cambodia
               </p>
             </div>

@@ -50,12 +50,10 @@ export default function BlogPage() {
           </div>
         ) : (
           <section className="content-section">
-            <div className="text-center mb-8">
-              <div className="section-heading-accent">
-                <span className="font-semibold text-sm uppercase tracking-wider block mb-3 text-accent-gold">Latest Updates</span>
-                <h2 className="text-4xl md:text-5xl font-bold">Stories of Faith</h2>
-              </div>
-              <p className="text-xl text-gray-600 content-wrapper mt-4">
+            <div className="text-center">
+              <span className="font-semibold text-sm uppercase tracking-wider block mb-3 text-accent-gold">Latest Updates</span>
+              <h2 className="section-title">Stories of Faith</h2>
+              <p className="section-subtitle">
                 <span className="text-3xl font-bold text-primary-blue">{posts.length}</span> stories of faith and service from the field
               </p>
             </div>

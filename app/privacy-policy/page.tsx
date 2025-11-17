@@ -39,8 +39,9 @@ export default function PrivacyPolicyPage() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8">
-        <div className="prose prose-lg max-w-4xl mx-auto">
+      <div className="page-container">
+        <section className="content-section">
+          <div className="prose section-content">
           <p className="text-sm text-gray-600 mb-8">
             <strong>Last Updated:</strong> January 15, 2025
           </p>
@@ -321,7 +322,8 @@ export default function PrivacyPolicyPage() {
               Return to Home
             </Link>
           </div>
-        </div>
+          </div>
+        </section>
       </div>
     </div>
   )

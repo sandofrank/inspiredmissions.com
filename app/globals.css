@@ -6,28 +6,48 @@
    CSS VARIABLES
 ======================================== */
 :root {
-  /* Cambodia-Inspired Color Palette */
-  --primary: #032EA1;
-  --primary-light: #1e5dc7;
-  --primary-dark: #021e6b;
+  /* Royal Cambodian Temple Palette */
+  --primary: #1e3a8a;
+  --primary-light: #3b5fc9;
+  --primary-dark: #0f1f4a;
 
   --secondary: #D4AF37;
   --secondary-light: #f4cf5d;
-  --secondary-dark: #b8941f;
+  --secondary-dark: #a8841c;
 
   --accent: #E00025;
   --accent-light: #ff1a3d;
   --accent-dark: #a8001c;
 
+  /* Royal Blue Tones */
+  --royal-blue: #1e3a8a;
+  --sapphire: #1d4ed8;
+  --navy: #0f1f4a;
+  --azure: #3b82f6;
+  --sky-accent: #60a5fa;
+
+  /* Temple Gold Tones */
+  --temple-gold: #D4AF37;
+  --rich-gold: #b8941f;
+  --bright-gold: #f4cf5d;
+  --amber: #d4a037;
+  --dark-gold: #8a6f1a;
+
+  /* Backgrounds - Royal Theme */
+  --cream: #fdfbf8;
+  --pale-blue: #f0f4fc;
+  --light-azure: #e8f0fb;
+  --soft-gold: #fef9ed;
+
   --background: #ffffff;
-  --foreground: #1f2937;
-  --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --gray-200: #e5e7eb;
-  --gray-600: #4b5563;
-  --gray-700: #374151;
-  --gray-800: #1f2937;
-  --gray-900: #111827;
+  --foreground: #0a1628;
+  --gray-50: #f8fafc;
+  --gray-100: #e8eef6;
+  --gray-200: #d1dce8;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0a1628;
 }
 
 /* ========================================
@@ -81,8 +101,8 @@ h1, h2, h3, h4, h5, h6 {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
-  opacity: 0.8;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--royal-blue) 40%, var(--sapphire) 70%, var(--azure) 100%);
+  opacity: 0.75;
   z-index: 1;
 }
 
@@ -163,97 +183,78 @@ h1, h2, h3, h4, h5, h6 {
    SECTION STYLES
 ======================================== */
 .section-bg-dots {
-  background-color: var(--gray-200);
-  background-image: radial-gradient(rgba(3, 46, 161, 0.05) 1px, transparent 1px);
+  background-color: var(--pale-blue);
+  background-image: radial-gradient(var(--royal-blue) 0.5px, transparent 0.5px);
   background-size: 20px 20px;
-  margin: 0 -1.5rem 2rem -1.5rem;
+  margin: 0 -1.5rem 0 -1.5rem;
   padding: 3rem 1.5rem;
   border-radius: 1rem;
 }
 
 @media (min-width: 768px) {
   .section-bg-dots {
-    margin: 0 -2rem 2.5rem -2rem;
+    margin: 0 -2rem 0 -2rem;
     padding: 4rem 2rem 3rem 2rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-bg-dots {
-    margin: 0 -2.5rem 3rem -2.5rem;
-    padding: 5rem 2.5rem 3.5rem 2.5rem;
+    margin: 0 -2.5rem 0 -2.5rem;
+    padding: 4rem 2.5rem 3.5rem 2.5rem;
   }
 }
 
 .section-bg-blue {
-  background-color: #dbeafe;
-  margin: 0 -1.5rem 2rem -1.5rem;
+  background-color: var(--soft-gold);
+  margin: 0 -1.5rem 0 -1.5rem;
   padding: 3rem 1.5rem;
   border-radius: 0 1rem 1rem 0;
-  border-left: 5px solid var(--primary);
-  box-shadow: 0 4px 12px rgba(3, 46, 161, 0.1);
+  border-left: 5px solid var(--royal-blue);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 @media (min-width: 768px) {
   .section-bg-blue {
-    margin: 0 -2rem 2.5rem -2rem;
+    margin: 0 -2rem 0 -2rem;
     padding: 4rem 2rem 3rem 2rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-bg-blue {
-    margin: 0 -2.5rem 3rem -2.5rem;
-    padding: 5rem 2.5rem 3.5rem 2.5rem;
+    margin: 0 -2.5rem 0 -2.5rem;
+    padding: 4rem 2.5rem 3.5rem 2.5rem;
   }
 }
 
 .section-bg-red {
   background-color: #fee2e2;
-  margin: 0 -1.5rem 2rem -1.5rem;
+  margin: 0 -1.5rem 0 -1.5rem;
   padding: 3rem 1.5rem;
   border-radius: 0 1rem 1rem 0;
   border-left: 5px solid var(--accent);
-  box-shadow: 0 4px 12px rgba(224, 0, 37, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 @media (min-width: 768px) {
   .section-bg-red {
-    margin: 0 -2rem 2.5rem -2rem;
+    margin: 0 -2rem 0 -2rem;
     padding: 4rem 2rem 3rem 2rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-bg-red {
-    margin: 0 -2.5rem 3rem -2.5rem;
-    padding: 5rem 2.5rem 3.5rem 2.5rem;
+    margin: 0 -2.5rem 0 -2.5rem;
+    padding: 4rem 2.5rem 3.5rem 2.5rem;
   }
 }
 
 .section-heading-accent {
-  position: relative;
-  padding-top: 1.5rem;
   display: block;
   max-width: 56rem;
   margin: 0 auto;
-}
-
-.section-heading-accent::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
-  border-radius: 2px;
-}
-
-/* When used inside text-center, center the accent bar */
-.text-center .section-heading-accent::before {
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* ========================================
@@ -269,6 +270,25 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: var(--gray-900);
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: clamp(80px, 20vw, 120px);
+  height: 4px;
+  background: linear-gradient(90deg, var(--temple-gold) 0%, var(--secondary-light) 100%);
+  border-radius: 2px;
+}
+
+/* When section-title is inside text-center, center the accent bar */
+.text-center .section-title::before {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .section-intro {
@@ -276,6 +296,16 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.75;
   color: var(--gray-700);
   margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: var(--gray-600);
+  margin-top: 1rem;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ========================================
@@ -288,7 +318,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 768px) {
   .blog-article {
-    padding-top: 6rem;
+    padding-top: 4rem;
     padding-bottom: 5rem;
   }
 }
@@ -307,6 +337,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
   margin-bottom: 0.875rem;
   max-width: 56rem;
+}
+
+.prose h2.gold-accent {
+  color: var(--dark-gold);
 }
 
 .prose h3 {
@@ -371,7 +405,7 @@ h1, h2, h3, h4, h5, h6 {
 .prose img {
   border-radius: 0.75rem;
   margin: 1.5rem auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   max-width: 100%;
 }
 
@@ -425,7 +459,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 16rem;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .image-hero {
@@ -433,7 +467,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 24rem;
   border-radius: 0.75rem;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   margin: 1.5rem auto;
   max-width: 56rem;
 }
@@ -443,6 +477,18 @@ h1, h2, h3, h4, h5, h6 {
 ======================================== */
 .text-accent-gold {
   color: var(--secondary);
+}
+
+.text-temple-gold {
+  color: var(--temple-gold);
+}
+
+.text-rich-gold {
+  color: var(--rich-gold);
+}
+
+.text-dark-gold {
+  color: var(--dark-gold);
 }
 
 .text-primary-blue {
@@ -465,38 +511,39 @@ h1, h2, h3, h4, h5, h6 {
    BUTTONS
 ======================================== */
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
   color: white;
   padding: 0.875rem 2rem;
   border-radius: 0.5rem;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 0.3s;
-  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: inline-block;
   text-decoration: none;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
 }
 
 .btn-secondary {
-  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
-  color: var(--primary-dark);
+  background: linear-gradient(135deg, #a8841c 0%, #D4AF37 100%);
+  color: white;
   padding: 0.875rem 2rem;
   border-radius: 0.5rem;
   font-weight: 700;
   transition: all 0.3s;
-  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: inline-block;
   text-decoration: none;
 }
 
 .btn-secondary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
-  background: linear-gradient(135deg, var(--secondary-light) 0%, var(--secondary) 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #D4AF37 0%, #f4cf5d 100%);
 }
 
 /* ========================================
@@ -508,15 +555,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .hover-lift:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .card-border-blue {
-  border-top: 4px solid var(--primary);
+  border-top: 4px solid var(--royal-blue);
 }
 
 .card-border-gold {
-  border-top: 4px solid var(--secondary);
+  border-top: 4px solid var(--temple-gold);
 }
 
 .card-border-red {
@@ -530,13 +577,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .info-box-primary {
-  background-color: rgba(3, 46, 161, 0.05);
-  border-left: 4px solid var(--primary);
+  background-color: rgba(30, 58, 138, 0.08);
+  border-left: 4px solid var(--royal-blue);
 }
 
 .info-box-secondary {
-  background-color: rgba(212, 175, 55, 0.05);
-  border-left: 4px solid var(--secondary);
+  background-color: rgba(212, 175, 55, 0.08);
+  border-left: 4px solid var(--temple-gold);
 }
 
 .info-box-accent {
@@ -548,11 +595,11 @@ h1, h2, h3, h4, h5, h6 {
    GRADIENTS
 ======================================== */
 .gradient-hero {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+  background: linear-gradient(135deg, #0a1628 0%, var(--navy) 40%, var(--primary-dark) 70%, var(--royal-blue) 100%);
 }
 
 .gradient-primary {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  background: linear-gradient(135deg, var(--royal-blue) 0%, var(--sapphire) 100%);
 }
 
 .gradient-overlay-dark {
@@ -563,11 +610,11 @@ h1, h2, h3, h4, h5, h6 {
    ICON UTILITIES
 ======================================== */
 .icon-primary {
-  color: var(--primary);
+  color: var(--royal-blue);
 }
 
 .icon-secondary {
-  color: var(--secondary);
+  color: var(--temple-gold);
 }
 
 .icon-accent {
@@ -575,7 +622,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-icon-primary {
-  background-color: rgba(3, 46, 161, 0.1);
+  background-color: rgba(30, 58, 138, 0.1);
 }
 
 .bg-icon-secondary {
@@ -590,11 +637,11 @@ h1, h2, h3, h4, h5, h6 {
    BORDER UTILITIES
 ======================================== */
 .border-left-primary {
-  border-left: 4px solid var(--primary);
+  border-left: 4px solid var(--royal-blue);
 }
 
 .border-left-secondary {
-  border-left: 4px solid var(--secondary);
+  border-left: 4px solid var(--temple-gold);
 }
 
 .border-left-accent {
@@ -602,7 +649,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .border-left-primary-color {
-  border-left-color: var(--primary);
+  border-left-color: var(--royal-blue);
 }
 
 /* ========================================
@@ -617,7 +664,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pattern-dots {
-  background-image: radial-gradient(rgba(3, 46, 161, 0.05) 1px, transparent 1px);
+  background-image: radial-gradient(var(--royal-blue) 0.5px, transparent 0.5px);
   background-size: 20px 20px;
 }
 
@@ -670,27 +717,27 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Enhanced focus indicators for better keyboard navigation */
 *:focus-visible {
-  outline: 3px solid var(--secondary);
+  outline: 3px solid var(--dark-gold);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
 /* Focus styles for links */
 a:focus-visible {
-  outline: 3px solid var(--secondary);
+  outline: 3px solid var(--dark-gold);
   outline-offset: 3px;
 }
 
 /* Focus styles for buttons */
 button:focus-visible {
-  outline: 3px solid var(--secondary);
+  outline: 3px solid var(--dark-gold);
   outline-offset: 2px;
 }
 
 /* Focus styles for interactive elements in header */
 header a:focus-visible,
 header button:focus-visible {
-  outline: 3px solid var(--secondary);
+  outline: 3px solid var(--dark-gold);
   outline-offset: 2px;
 }
 
@@ -707,7 +754,7 @@ header button:focus-visible {
   left: 0;
   right: 0;
   height: 2px;
-  background-color: var(--secondary);
+  background-color: var(--dark-gold);
   border-radius: 1px;
 }
 

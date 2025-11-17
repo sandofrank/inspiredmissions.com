@@ -173,9 +173,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         {/* Back to blog CTA */}
         <div className="mt-16 pt-8 border-t border-gray-200">
           <div className="text-center section-bg-dots py-8">
-            <div className="section-heading-accent mb-4">
-              <h2 className="text-3xl font-bold">More Stories</h2>
-            </div>
+            <h2 className="section-title">More Stories</h2>
             <p className="text-gray-600 mb-5 text-lg">Discover more stories of faith and transformation from Cambodia</p>
             <Link href="/blog" className="btn-primary">
               View All Stories

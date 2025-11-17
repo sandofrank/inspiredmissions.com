@@ -36,7 +36,7 @@ export default function HistoryPage() {
         </div>
       </div>
 
-      <div className="page-container py-8">
+      <div className="page-container">
           {/* Introduction */}
           <section className="content-section">
             <div className="prose section-content">
@@ -50,9 +50,7 @@ export default function HistoryPage() {
       {/* Ancient Glory */}
       <section className="section-bg-dots">
         <div className="page-container">
-            <div className="section-heading-accent">
-              <h2 className="section-title">A Kingdom of Glory</h2>
-            </div>
+            <h2 className="section-title">A Kingdom of Glory</h2>
             <div className="prose section-content">
 
               <div className="image-hero">
@@ -97,12 +95,10 @@ export default function HistoryPage() {
         </div>
       </section>
 
-      <div className="page-container py-8">
+      <div className="page-container">
           {/* Colonial Period */}
           <section className="content-section">
-            <div className="section-heading-accent">
-              <h2 className="section-title">Colonial Rule and Independence</h2>
-            </div>
+            <h2 className="section-title">Colonial Rule and Independence</h2>
             <div className="prose section-content">
               <p>
                 From 1863 to 1953, Cambodia was under French colonial rule as part of French Indochina. While this period brought some modernization, it also disrupted traditional structures and created economic dependencies. Cambodia gained independence in 1953 under King Norodom Sihanouk, who worked to maintain neutrality during the escalating Vietnam War.
@@ -151,12 +147,10 @@ export default function HistoryPage() {
         </div>
       </section>
 
-      <div className="page-container py-8">
+      <div className="page-container">
           {/* Aftermath */}
           <section className="content-section">
-            <div className="section-heading-accent">
-              <h2 className="section-title">The Long Road to Recovery</h2>
-            </div>
+            <h2 className="section-title">The Long Road to Recovery</h2>
             <div className="prose section-content">
               <div className="flex gap-4 items-start">
                 <svg className="w-10 h-10 icon-accent opacity-15 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -373,7 +367,7 @@ export default function HistoryPage() {
         </div>
       </section>
 
-      <div className="page-container py-8">
+      <div className="page-container">
           {/* Hope for the Future */}
           <section className="content-section">
             <div className="prose section-content">
@@ -443,9 +437,7 @@ export default function HistoryPage() {
       <section className="section-bg-dots text-center">
         <div className="page-container">
             <div className="section-content">
-              <div className="section-heading-accent inline-block mb-6">
-                <h2 className="section-title">Join Us in This Important Work</h2>
-              </div>
+              <h2 className="section-title">Join Us in This Important Work</h2>
               <p className="section-intro mb-6">
                 Your partnership helps equip Cambodian pastors to bring hope, healing, and the transforming power of the Gospel to their communities.
               </p>
