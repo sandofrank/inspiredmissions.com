@@ -62,6 +62,7 @@ export async function POST(request: Request) {
           </head>
           <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
             <div style="background: linear-gradient(135deg, #021e6b 0%, #032EA1 50%, #1e5dc7 100%); padding: 40px 20px; text-align: center; border-radius: 10px 10px 0 0;">
+              <img src="https://inspiredmissions.com/images/logo.png" alt="Inspired Missions" style="height: 60px; width: auto; margin-bottom: 20px; filter: brightness(0) invert(1);" />
               <h1 style="color: white; margin: 0; font-size: 28px;">Welcome to Inspired Missions</h1>
             </div>
 
