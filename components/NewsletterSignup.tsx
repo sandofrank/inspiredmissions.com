@@ -53,7 +53,7 @@ export default function NewsletterSignup() {
             placeholder="Enter your email"
             required
             disabled={status === 'loading'}
-            className="flex-1 px-4 py-3 rounded-lg border-2 border-white/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:border-secondary transition-colors disabled:opacity-50"
+            className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
             aria-label="Email address"
           />
           <button
