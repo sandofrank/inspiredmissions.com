@@ -1,8 +1,16 @@
 import { NextResponse } from 'next/server'
-import { resend, RESEND_CONFIG } from '@/lib/resend'
+import { resend, RESEND_CONFIG, isResendConfigured } from '@/lib/resend'
 
 export async function POST(request: Request) {
   try {
+    // Check if Resend is properly configured
+    if (!isResendConfigured()) {
+      return NextResponse.json(
+        { error: 'Newsletter service is not configured' },
+        { status: 503 }
+      )
+    }
+
     const { email } = await request.json()
 
     // Validate email

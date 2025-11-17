@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { resend, RESEND_CONFIG } from '@/lib/resend'
+import { resend, RESEND_CONFIG, isResendConfigured } from '@/lib/resend'
 import { generateBlogPostEmail } from '@/components/emails/BlogPostEmail'
 import { getPostBySlug } from '@/lib/blog'
 
@@ -12,6 +12,14 @@ export async function POST(request: Request) {
       return NextResponse.json(
         { error: 'Unauthorized' },
         { status: 401 }
+      )
+    }
+
+    // Check if Resend is properly configured
+    if (!isResendConfigured()) {
+      return NextResponse.json(
+        { error: 'Newsletter service is not configured' },
+        { status: 503 }
       )
     }
 
