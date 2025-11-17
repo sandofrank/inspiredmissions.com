@@ -142,8 +142,7 @@ export default function BlogPostEmail({
       <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 0; background-color: #f3f4f6;">
         <!-- Header -->
         <div style="background: linear-gradient(135deg, #021e6b 0%, #032EA1 50%, #1e5dc7 100%); padding: 30px 20px; text-align: center;">
-          <img src="${baseUrl}/images/logo.png" alt="Inspired Missions" width="80" height="40" style="display: block; margin: 0 auto 10px; max-width: 80px; max-height: 40px; filter: brightness(0) invert(1);" />
-          <h2 style="color: white; margin: 0; font-size: 18px; font-weight: normal; letter-spacing: 1px;">INSPIRED MISSIONS</h2>
+          <img src="${baseUrl}/images/logo.png" alt="Inspired Missions" width="160" height="80" style="display: block; margin: 0 auto; max-width: 160px; max-height: 80px; filter: brightness(0) invert(1);" />
         </div>
 
         <!-- Content -->
