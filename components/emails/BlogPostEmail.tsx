@@ -30,11 +30,26 @@ function convertMDXToHTML(content: string, baseUrl: string = 'https://inspiredmi
 
         const images = imageMatches.map((m: string) => m.replace(/['"]/g, ''))
 
-        // Generate Gallery HTML (all on one line to avoid code block formatting)
-        const imageHTML = images
-          .map((img: string) => `<div style="margin: 10px; max-width: 500px; display: inline-block; vertical-align: top;"><img src="${baseUrl}${img}" alt="Gallery image" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: block;" /></div>`)
-          .join('')
-        const fullHTML = `<div style="text-align: center; margin: 30px 0;">${imageHTML}</div>`
+        // Generate Gallery HTML as a 3-column grid using table (email-safe)
+        let tableRows = ''
+        for (let i = 0; i < images.length; i += 3) {
+          const row = images.slice(i, i + 3)
+          const cells = row.map((img: string) =>
+            `<td style="padding: 8px; width: 33.33%;">
+              <div style="width: 100%; padding-bottom: 100%; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <img src="${baseUrl}${img}" alt="Gallery image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" />
+              </div>
+            </td>`
+          ).join('')
+
+          // Fill empty cells if row has less than 3 images
+          const emptyCells = 3 - row.length
+          const emptyHTML = emptyCells > 0 ? '<td style="padding: 8px; width: 33.33%;"></td>'.repeat(emptyCells) : ''
+
+          tableRows += `<tr>${cells}${emptyHTML}</tr>`
+        }
+
+        const fullHTML = `<div style="margin: 30px 0;"><table cellpadding="0" cellspacing="0" border="0" style="width: 100%; max-width: 600px; margin: 0 auto;"><tbody>${tableRows}</tbody></table></div>`
 
         // Store HTML and return placeholder
         // Use GALLERYPLACEHOLDER instead of ___ to avoid markdown emphasis syntax
