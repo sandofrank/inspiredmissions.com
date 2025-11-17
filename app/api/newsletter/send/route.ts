@@ -7,8 +7,11 @@ export async function POST(request: Request) {
   try {
     const { slug, apiKey } = await request.json()
 
-    // Simple API key protection - you should set this in your environment variables
-    if (apiKey !== process.env.NEWSLETTER_API_KEY) {
+    // Simple API key protection - trim both values to handle whitespace
+    const receivedKey = apiKey?.trim()
+    const expectedKey = process.env.NEWSLETTER_API_KEY?.trim()
+
+    if (receivedKey !== expectedKey) {
       return NextResponse.json(
         { error: 'Unauthorized' },
         { status: 401 }
