@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "tinacms dev -c \"next dev\"",
+    "dev:next": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -17,9 +18,11 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "resend": "^6.4.2",
+    "tinacms": "^2.9.3",
     "yet-another-react-lightbox": "^3.25.0"
   },
   "devDependencies": {
+    "@tinacms/cli": "^1.12.2",
     "@types/jsdom": "^21.1.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
