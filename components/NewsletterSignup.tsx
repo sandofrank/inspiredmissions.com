@@ -42,14 +42,15 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <div className="bg-gradient-to-br from-primary to-primary-light p-6 rounded-xl shadow-lg">
-      <h3 className="text-2xl font-bold text-white mb-2">Stay Connected</h3>
-      <p className="text-gray-100 mb-4">
-        Get updates on our ministry and new blog posts delivered to your inbox.
-      </p>
+    <div className="bg-gradient-to-br from-primary to-primary-light p-4 rounded-lg shadow-md">
+      <div className="max-w-3xl mx-auto">
+        <h3 className="text-lg font-bold text-white mb-1">Subscribe to Our Newsletter</h3>
+        <p className="text-gray-100 text-sm mb-3">
+          Receive inspiring stories from the field, ministry updates, prayer requests, and ways you can partner with us in transforming lives in Cambodia.
+        </p>
 
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <div className="flex flex-col sm:flex-row gap-3">
+      <form onSubmit={handleSubmit} className="space-y-2">
+        <div className="flex flex-col sm:flex-row gap-2">
           <input
             type="text"
             value={firstName}
@@ -57,7 +58,7 @@ export default function NewsletterSignup() {
             placeholder="First Name"
             required
             disabled={status === 'loading'}
-            className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
+            className="flex-1 px-3 py-2 text-sm rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
             aria-label="First name"
           />
           <input
@@ -67,11 +68,9 @@ export default function NewsletterSignup() {
             placeholder="Last Name"
             required
             disabled={status === 'loading'}
-            className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
+            className="flex-1 px-3 py-2 text-sm rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
             aria-label="Last name"
           />
-        </div>
-        <div className="flex flex-col sm:flex-row gap-3">
           <input
             type="email"
             value={email}
@@ -79,13 +78,13 @@ export default function NewsletterSignup() {
             placeholder="Email Address"
             required
             disabled={status === 'loading'}
-            className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
+            className="flex-1 px-3 py-2 text-sm rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
             aria-label="Email address"
           />
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="btn-secondary whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-6 py-2 text-sm bg-gradient-to-br from-secondary to-accent-gold text-primary-dark font-bold rounded hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
           >
             {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
           </button>
@@ -93,7 +92,7 @@ export default function NewsletterSignup() {
 
         {message && (
           <div
-            className={`p-3 rounded-lg text-sm ${
+            className={`p-2 rounded text-xs ${
               status === 'success'
                 ? 'bg-green-500/20 text-green-100 border border-green-300/30'
                 : 'bg-red-500/20 text-red-100 border border-red-300/30'
@@ -105,9 +104,10 @@ export default function NewsletterSignup() {
         )}
       </form>
 
-      <p className="text-xs text-white/70 mt-3">
-        We respect your privacy. Unsubscribe anytime.
-      </p>
+        <p className="text-xs text-white/70 mt-2">
+          We respect your privacy. Unsubscribe anytime.
+        </p>
+      </div>
     </div>
   )
 }
