@@ -1,5 +1,3 @@
-import { marked } from 'marked'
-
 interface BlogPostEmailProps {
   title: string
   excerpt: string
@@ -72,8 +70,26 @@ function convertMDXToHTML(content: string, baseUrl: string = 'https://inspiredmi
   // Clean up any extra blank lines left from removing components
   htmlContent = htmlContent.replace(/\n{3,}/g, '\n\n')
 
-  // Convert markdown to HTML first (with default rendering)
-  let html = marked.parse(htmlContent, { async: false }) as string
+  // Simple markdown to HTML conversion (basic patterns for email)
+  let html = htmlContent
+    // Headers
+    .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+    .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+    .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+    // Bold and italic
+    .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    // Links
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+    // Line breaks and paragraphs
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/^(?!<[hp])/gim, '<p>')
+    .replace(/(?![>])$/gim, '</p>')
+    // Clean up empty paragraphs
+    .replace(/<p><\/p>/g, '')
+    .replace(/<p>(<h[1-6]>)/g, '$1')
+    .replace(/(<\/h[1-6]>)<\/p>/g, '$1')
 
   // Now post-process the HTML to add styles and fix image URLs
   // Fix image URLs to be absolute (but skip Gallery images which already have absolute URLs and styles)

@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev -c \"next dev\"",
-    "dev:next": "next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,20 +11,15 @@
     "download-images": "node scripts/download-blog-images.js"
   },
   "dependencies": {
-    "@fontsource/inter": "^5.2.8",
-    "@fontsource/playfair-display": "^5.2.8",
     "gray-matter": "^4.0.3",
-    "marked": "^17.0.0",
     "next": "^15.0.0",
     "next-mdx-remote": "^5.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "resend": "^6.4.2",
-    "tinacms": "^2.9.3",
     "yet-another-react-lightbox": "^3.25.0"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.12.2",
     "@types/jsdom": "^21.1.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
@@ -35,6 +29,7 @@
     "eslint-config-next": "^15.0.0",
     "jsdom": "^25.0.0",
     "postcss": "^8.4.0",
+    "sharp": "^0.34.5",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.6.0"
   }

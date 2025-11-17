@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -18,7 +19,15 @@ export default function PrivacyPolicyPage() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="hero-section hero-section-small hero-bg-angkor-wat">
+      <div className="hero-section hero-section-small">
+        <Image
+          src="/images/hero-angkor-wat.jpg"
+          alt="Angkor Wat Cambodia"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
+        />
         <div className="hero-overlay hero-overlay-strong"></div>
         <div className="hero-content">
           <h1 className="hero-title">

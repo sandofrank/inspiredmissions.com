@@ -16,7 +16,15 @@ export default function HistoryPage() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="hero-section hero-section-medium hero-bg-bibleschool3">
+      <div className="hero-section hero-section-medium">
+        <Image
+          src="/images/about-cambodia/bibleschool3.jpg"
+          alt="Bible School in Cambodia"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
+        />
         <div className="hero-overlay hero-overlay-strong"></div>
         <div className="hero-content">
           <h1 className="hero-title">

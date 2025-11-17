@@ -15,7 +15,15 @@ export default function AboutCambodiaPage() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="hero-section hero-section-medium hero-bg-jm8">
+      <div className="hero-section hero-section-medium">
+        <Image
+          src="/images/about-cambodia/jm8.jpg"
+          alt="Ministry in Cambodia"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
+        />
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1 className="hero-title">

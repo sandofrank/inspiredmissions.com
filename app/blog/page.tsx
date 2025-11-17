@@ -19,7 +19,15 @@ export default function BlogPage() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="hero-section hero-section-medium hero-bg-support03">
+      <div className="hero-section hero-section-medium">
+        <Image
+          src="/images/about-cambodia/support-03.jpg"
+          alt="Supporting Ministry in Cambodia"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
+        />
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <span className="font-semibold text-sm uppercase tracking-wider text-secondary-light">Stories from the Field</span>

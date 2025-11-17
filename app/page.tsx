@@ -33,7 +33,15 @@ export default function Home() {
     <div>
       <StructuredData data={websiteSchema} />
       {/* Hero Banner */}
-      <div className="hero-section hero-bg-angkor-wat">
+      <div className="hero-section">
+        <Image
+          src="/images/hero-angkor-wat.jpg"
+          alt="Angkor Wat Cambodia"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
+        />
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1 className="hero-title">
