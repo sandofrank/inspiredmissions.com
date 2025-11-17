@@ -48,7 +48,7 @@ export default function Home() {
             Transforming Lives Through God's Grace
           </h1>
           <p className="hero-subtitle">
-            Building up and training local pastors in Cambodia through Biblical studies
+            Training Pastors and Leaders in Cambodia
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/blog" className="btn-primary">
