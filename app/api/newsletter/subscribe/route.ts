@@ -29,14 +29,22 @@ export async function POST(request: Request) {
       )
     }
 
-    // Add to Resend audience (if you have an audience ID configured)
-    if (RESEND_CONFIG.audienceId) {
-      await resend.contacts.create({
+    // Add contact to Resend (Resend 2025 API - audienceId is no longer used in contacts.create)
+    try {
+      const contactResponse = await resend.contacts.create({
         email,
         firstName,
         lastName,
-        audienceId: RESEND_CONFIG.audienceId,
+        unsubscribed: false,
       })
+      console.log('Contact created successfully:', contactResponse)
+    } catch (contactError: any) {
+      console.error('Error creating contact:', contactError)
+      // If it's a duplicate error, that's okay - continue to send welcome email
+      if (!contactError.message?.includes('already exists') && !contactError.message?.includes('Contact already exists')) {
+        throw contactError
+      }
+      console.log('Contact already exists, continuing with welcome email')
     }
 
     // Send welcome email
