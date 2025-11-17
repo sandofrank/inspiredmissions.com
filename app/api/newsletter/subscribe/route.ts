@@ -11,10 +11,18 @@ export async function POST(request: Request) {
       )
     }
 
-    const { email } = await request.json()
+    const { firstName, lastName, email } = await request.json()
+
+    // Validate required fields
+    if (!firstName || !lastName || !email) {
+      return NextResponse.json(
+        { error: 'Please provide first name, last name, and email address' },
+        { status: 400 }
+      )
+    }
 
     // Validate email
-    if (!email || !email.includes('@')) {
+    if (!email.includes('@')) {
       return NextResponse.json(
         { error: 'Please provide a valid email address' },
         { status: 400 }
@@ -25,6 +33,8 @@ export async function POST(request: Request) {
     if (RESEND_CONFIG.audienceId) {
       await resend.contacts.create({
         email,
+        firstName,
+        lastName,
         audienceId: RESEND_CONFIG.audienceId,
       })
     }
@@ -48,6 +58,7 @@ export async function POST(request: Request) {
             </div>
 
             <div style="background: #ffffff; padding: 30px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 10px 10px;">
+              <p style="font-size: 16px; margin-bottom: 20px;">Hi ${firstName},</p>
               <p style="font-size: 16px; margin-bottom: 20px;">Thank you for subscribing to our newsletter!</p>
 
               <p style="font-size: 16px; margin-bottom: 20px;">

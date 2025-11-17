@@ -3,6 +3,8 @@
 import { useState } from 'react'
 
 export default function NewsletterSignup() {
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
@@ -18,7 +20,7 @@ export default function NewsletterSignup() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ firstName, lastName, email }),
       })
 
       const data = await response.json()
@@ -26,6 +28,8 @@ export default function NewsletterSignup() {
       if (response.ok) {
         setStatus('success')
         setMessage(data.message || 'Successfully subscribed to newsletter!')
+        setFirstName('')
+        setLastName('')
         setEmail('')
       } else {
         setStatus('error')
@@ -47,10 +51,32 @@ export default function NewsletterSignup() {
       <form onSubmit={handleSubmit} className="space-y-3">
         <div className="flex flex-col sm:flex-row gap-3">
           <input
+            type="text"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            placeholder="First Name"
+            required
+            disabled={status === 'loading'}
+            className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
+            aria-label="First name"
+          />
+          <input
+            type="text"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            placeholder="Last Name"
+            required
+            disabled={status === 'loading'}
+            className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
+            aria-label="Last name"
+          />
+        </div>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
+            placeholder="Email Address"
             required
             disabled={status === 'loading'}
             className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
