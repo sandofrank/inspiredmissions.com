@@ -1,9 +1,15 @@
 import Link from 'next/link'
+import NewsletterSignup from './NewsletterSignup'
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white mt-20">
       <div className="container mx-auto px-4 py-12">
+        {/* Newsletter Signup */}
+        <div className="mb-12">
+          <NewsletterSignup />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {/* About */}
           <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-800">

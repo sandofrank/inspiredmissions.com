@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Metadata } from 'next'
 import { getAllPosts } from '@/lib/blog'
 import StructuredData from '@/components/StructuredData'
+import NewsletterSignup from '@/components/NewsletterSignup'
 
 export const metadata: Metadata = {
   title: "Home",
@@ -262,6 +263,11 @@ export default function Home() {
                 </div>
               </>
             ) : null}
+        </section>
+
+        {/* Newsletter Signup Section */}
+        <section className="content-section">
+          <NewsletterSignup />
         </section>
       </div>
     </div>
