@@ -99,7 +99,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-3 text-white hover:text-yellow-300 transition-colors"
+            className="lg:hidden p-4 text-white hover:text-yellow-300 transition-colors"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
@@ -122,7 +122,7 @@ export default function Header() {
             <div className="flex flex-col space-y-1">
               <Link
                 href="/"
-                className="text-white hover:text-yellow-300 font-medium py-2 transition-colors"
+                className="text-white hover:text-yellow-300 font-medium py-3 px-4 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
                 aria-current={isActive('/') ? 'page' : undefined}
               >
@@ -130,7 +130,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/about-cambodia"
-                className="text-white hover:text-yellow-300 font-medium py-2 transition-colors"
+                className="text-white hover:text-yellow-300 font-medium py-3 px-4 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
                 aria-current={isActive('/about-cambodia') ? 'page' : undefined}
               >
@@ -138,7 +138,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/gallery"
-                className="text-white hover:text-yellow-300 font-medium py-2 transition-colors"
+                className="text-white hover:text-yellow-300 font-medium py-3 px-4 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
                 aria-current={isActive('/gallery') ? 'page' : undefined}
               >
@@ -146,7 +146,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/history"
-                className="text-white hover:text-yellow-300 font-medium py-2 transition-colors"
+                className="text-white hover:text-yellow-300 font-medium py-3 px-4 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
                 aria-current={isActive('/history') ? 'page' : undefined}
               >
@@ -154,7 +154,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/blog"
-                className="text-white hover:text-yellow-300 font-medium py-2 transition-colors"
+                className="text-white hover:text-yellow-300 font-medium py-3 px-4 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
                 aria-current={isActive('/blog') ? 'page' : undefined}
               >

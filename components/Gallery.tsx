@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, lazy, Suspense } from 'react'
 import Image from 'next/image'
-import Lightbox from 'yet-another-react-lightbox'
-import 'yet-another-react-lightbox/styles.css'
+
+// Lazy load the lightbox component - only loads when user clicks an image
+const LightboxWrapper = lazy(() => import('./LightboxWrapper'))
 
 interface GalleryProps {
   images: string[]
@@ -49,15 +50,16 @@ export default function Gallery({ images, columns = 3 }: GalleryProps) {
         ))}
       </div>
 
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        index={index}
-        slides={slides}
-        styles={{
-          container: { backgroundColor: 'rgba(0, 0, 0, 0.95)' }
-        }}
-      />
+      {open && (
+        <Suspense fallback={<div className="fixed inset-0 bg-black/95 flex items-center justify-center z-50"><div className="text-white">Loading...</div></div>}>
+          <LightboxWrapper
+            open={open}
+            close={() => setOpen(false)}
+            index={index}
+            slides={slides}
+          />
+        </Suspense>
+      )}
     </>
   )
 }

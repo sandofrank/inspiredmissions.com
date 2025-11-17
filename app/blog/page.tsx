@@ -25,7 +25,7 @@ export default function BlogPage() {
           alt="Supporting Ministry in Cambodia"
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px"
           style={{ objectFit: 'cover' }}
         />
         <div className="hero-overlay"></div>
@@ -52,7 +52,12 @@ export default function BlogPage() {
           <section className="content-section">
             <div className="text-center">
               <span className="font-semibold text-sm uppercase tracking-wider block mb-3 text-accent-gold">Latest Updates</span>
-              <h2 className="section-title">Stories of Faith</h2>
+              <div className="flex items-center justify-center gap-3 mb-4 title-with-icon">
+                <svg className="w-10 h-10 flex-shrink-0 icon-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+                <h2 className="section-title mb-0">Stories of Faith</h2>
+              </div>
               <p className="section-subtitle">
                 <span className="text-3xl font-bold text-primary-blue">{posts.length}</span> stories of faith and service from the field
               </p>

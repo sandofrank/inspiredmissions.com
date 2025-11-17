@@ -25,7 +25,8 @@ export default memo(function PhnomPenhClock() {
     }
 
     updateTime()
-    const interval = setInterval(updateTime, 1000)
+    // Update every 60 seconds instead of every second to improve performance
+    const interval = setInterval(updateTime, 60000)
 
     return () => clearInterval(interval)
   }, [])

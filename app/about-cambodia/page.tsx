@@ -21,7 +21,7 @@ export default function AboutCambodiaPage() {
           alt="Ministry in Cambodia"
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px"
           style={{ objectFit: 'cover' }}
         />
         <div className="hero-overlay"></div>
@@ -38,7 +38,12 @@ export default function AboutCambodiaPage() {
       <div className="page-container">
         {/* Cambodia Bible College */}
         <section className="content-section">
-          <h2 className="section-title">Cambodia Bible College</h2>
+          <div className="flex items-center gap-3 mb-4 title-with-icon">
+            <svg className="w-10 h-10 flex-shrink-0 icon-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            <h2 className="section-title mb-0">Cambodia Bible College</h2>
+          </div>
           <div className="prose section-content">
             <div className="flex items-start gap-6">
               <div className="flex-1">
@@ -71,9 +76,14 @@ export default function AboutCambodiaPage() {
       {/* Cambodia Children's Home */}
       <section className="section-bg-dots">
         <div className="page-container">
-          <h2 className="section-title">Cambodia Children's Home</h2>
+          <div className="flex items-center gap-3 mb-4 title-with-icon">
+            <svg className="w-10 h-10 flex-shrink-0 icon-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            <h2 className="section-title mb-0">Cambodia Children's Home</h2>
+          </div>
           <div className="image-hero">
-            <Image src="/images/about-cambodia/coh.jpg" alt="Children of Hope" fill className="object-cover" sizes="100vw" />
+            <Image src="/images/about-cambodia/coh.jpg" alt="Children of Hope" fill className="object-cover" sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px" />
           </div>
           <div className="prose section-content">
             <p>
@@ -109,7 +119,12 @@ export default function AboutCambodiaPage() {
       <div className="page-container">
         {/* Cambodia Cows */}
         <section className="content-section">
-          <h2 className="section-title">Cambodia Cows</h2>
+          <div className="flex items-center gap-3 mb-4 title-with-icon">
+            <svg className="w-10 h-10 flex-shrink-0 icon-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h2 className="section-title mb-0">Cambodia Cows</h2>
+          </div>
           <div className="prose section-content">
             <p className="flex items-start gap-3">
               <svg className="w-6 h-6 icon-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,9 +156,14 @@ export default function AboutCambodiaPage() {
       {/* Cambodia Fertilizer */}
       <section className="section-bg-dots">
         <div className="page-container">
-          <h2 className="section-title">Cambodia Fertilizer</h2>
+          <div className="flex items-center gap-3 mb-4 title-with-icon">
+            <svg className="w-10 h-10 flex-shrink-0 icon-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+            </svg>
+            <h2 className="section-title mb-0">Cambodia Fertilizer</h2>
+          </div>
           <div className="image-hero">
-            <Image src="/images/about-cambodia/projectfert-01.jpg" alt="Project Fertilizer" fill className="object-cover" sizes="100vw" />
+            <Image src="/images/about-cambodia/projectfert-01.jpg" alt="Project Fertilizer" fill className="object-cover" sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px" />
           </div>
           <div className="prose section-content relative">
             <p><strong>Cost:</strong> One bag of rice fertilizer is priced at $30-$100 (price fluctuates)</p>
@@ -170,7 +190,12 @@ export default function AboutCambodiaPage() {
       <div className="page-container">
         {/* Cambodia Jungle */}
         <section className="content-section">
-          <h2 className="section-title">Cambodia Jungle</h2>
+          <div className="flex items-center gap-3 mb-4 title-with-icon">
+            <svg className="w-10 h-10 flex-shrink-0 icon-secondary" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/>
+            </svg>
+            <h2 className="section-title mb-0">Cambodia Jungle</h2>
+          </div>
           <div className="prose section-content">
             <div className="flex gap-6 items-start">
               <svg className="w-20 h-20 icon-accent opacity-10 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -203,7 +228,12 @@ export default function AboutCambodiaPage() {
       {/* Cambodia Support */}
       <section className="section-bg-blue">
         <div className="page-container">
-          <h2 className="section-title">The Cost of Ministry</h2>
+          <div className="flex items-center gap-3 mb-4 title-with-icon">
+            <svg className="w-10 h-10 flex-shrink-0 icon-primary" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <h2 className="section-title mb-0">The Cost of Ministry</h2>
+          </div>
           <div className="prose section-content">
             <div className="flex gap-4 items-start">
               <svg className="w-8 h-8 icon-secondary opacity-20 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">

@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   width: clamp(80px, 20vw, 120px);
   height: 4px;
-  background: linear-gradient(90deg, var(--temple-gold) 0%, var(--secondary-light) 100%);
+  background: linear-gradient(90deg, var(--royal-blue) 0%, var(--temple-gold) 50%, var(--accent) 100%);
   border-radius: 2px;
 }
 
@@ -289,6 +289,34 @@ h1, h2, h3, h4, h5, h6 {
 .text-center .section-title::before {
   left: 50%;
   transform: translateX(-50%);
+}
+
+/* Accent bar for titles with icons - add to flex container */
+.title-with-icon {
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.title-with-icon::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: clamp(80px, 20vw, 120px);
+  height: 4px;
+  background: linear-gradient(90deg, var(--royal-blue) 0%, var(--temple-gold) 50%, var(--accent) 100%);
+  border-radius: 2px;
+}
+
+/* Center the accent bar when flex container is centered */
+.justify-center.title-with-icon::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* When section-title is in a flex container, remove its own accent bar */
+.flex .section-title::before {
+  display: none;
 }
 
 .section-intro {
@@ -456,7 +484,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .image-grid-item {
   position: relative;
+  aspect-ratio: 1;
   height: 16rem;
+  width: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);

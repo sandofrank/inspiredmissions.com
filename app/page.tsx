@@ -39,7 +39,7 @@ export default function Home() {
           alt="Angkor Wat Cambodia"
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px"
           style={{ objectFit: 'cover' }}
         />
         <div className="hero-overlay"></div>
@@ -77,7 +77,12 @@ export default function Home() {
         <section className="content-section">
           <div className="text-center">
             <span className="font-semibold text-sm uppercase tracking-wider block mb-3 text-accent-gold">What We Do</span>
-            <h2 className="section-title">Our Purpose</h2>
+            <div className="flex items-center justify-center gap-3 mb-4 title-with-icon">
+              <svg className="w-10 h-10 flex-shrink-0 icon-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <h2 className="section-title mb-0">Our Purpose</h2>
+            </div>
             <p className="section-subtitle">
               Three pillars guide our mission to transform lives in Cambodia
             </p>
@@ -128,7 +133,12 @@ export default function Home() {
         <div className="page-container">
             <div className="text-center">
               <span className="font-semibold text-sm uppercase tracking-wider block mb-3 text-accent-gold">Meet Our Team</span>
-              <h2 className="section-title">Our Missionaries in Cambodia</h2>
+              <div className="flex items-center justify-center gap-3 mb-4 title-with-icon">
+                <svg className="w-10 h-10 flex-shrink-0 icon-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <h2 className="section-title mb-0">Our Missionaries in Cambodia</h2>
+              </div>
               <p className="section-subtitle">
                 Dedicated servants bringing hope and transformation to communities across Cambodia
               </p>
@@ -206,7 +216,12 @@ export default function Home() {
         <section className="content-section">
             <div className="text-center">
               <span className="font-semibold text-sm uppercase tracking-wider block mb-3 text-accent-gold">Latest Updates</span>
-              <h2 className="section-title">Our Happenings</h2>
+              <div className="flex items-center justify-center gap-3 mb-4 title-with-icon">
+                <svg className="w-10 h-10 flex-shrink-0 icon-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                </svg>
+                <h2 className="section-title mb-0">Our Happenings</h2>
+              </div>
               <p className="section-subtitle">
                 Stay connected with our journey and see what God is doing in Cambodia
               </p>

@@ -22,7 +22,7 @@ export default function HistoryPage() {
           alt="Bible School in Cambodia"
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px"
           style={{ objectFit: 'cover' }}
         />
         <div className="hero-overlay hero-overlay-strong"></div>
@@ -50,7 +50,12 @@ export default function HistoryPage() {
       {/* Ancient Glory */}
       <section className="section-bg-dots">
         <div className="page-container">
-            <h2 className="section-title">A Kingdom of Glory</h2>
+            <div className="flex items-center gap-3 mb-4 title-with-icon">
+              <svg className="w-10 h-10 flex-shrink-0 icon-secondary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+              <h2 className="section-title mb-0">A Kingdom of Glory</h2>
+            </div>
             <div className="prose section-content">
 
               <div className="image-hero">
@@ -59,7 +64,7 @@ export default function HistoryPage() {
                   alt="Angkor Wat at Sunset - Symbol of Cambodia's Ancient Glory"
                   fill
                   className="object-cover"
-                  sizes="100vw"
+                  sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px"
                 />
               </div>
 
@@ -98,7 +103,12 @@ export default function HistoryPage() {
       <div className="page-container">
           {/* Colonial Period */}
           <section className="content-section">
-            <h2 className="section-title">Colonial Rule and Independence</h2>
+            <div className="flex items-center gap-3 mb-4 title-with-icon">
+              <svg className="w-10 h-10 flex-shrink-0 icon-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+              </svg>
+              <h2 className="section-title mb-0">Colonial Rule and Independence</h2>
+            </div>
             <div className="prose section-content">
               <p>
                 From 1863 to 1953, Cambodia was under French colonial rule as part of French Indochina. While this period brought some modernization, it also disrupted traditional structures and created economic dependencies. Cambodia gained independence in 1953 under King Norodom Sihanouk, who worked to maintain neutrality during the escalating Vietnam War.
@@ -113,13 +123,13 @@ export default function HistoryPage() {
       {/* The Khmer Rouge */}
       <section className="section-bg-red">
         <div className="page-container">
+            <div className="flex items-center gap-3 mb-4 title-with-icon">
+              <svg className="w-10 h-10 flex-shrink-0 icon-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              <h2 className="section-title mb-0">The Khmer Rouge Genocide (1975-1979)</h2>
+            </div>
             <div className="prose section-content">
-              <div className="flex items-center gap-3 mb-4">
-                <svg className="w-8 h-8 flex-shrink-0 icon-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                </svg>
-                <h2 className="section-title mb-0">The Khmer Rouge Genocide (1975-1979)</h2>
-              </div>
               <p>
                 In 1975, the radical communist Khmer Rouge, led by Pol Pot, seized power. What followed was one of the darkest chapters in modern history—a genocidal regime that would claim the lives of approximately 1.7 to 2 million Cambodians out of a population of about 8 million.
               </p>
@@ -150,16 +160,16 @@ export default function HistoryPage() {
       <div className="page-container">
           {/* Aftermath */}
           <section className="content-section">
-            <h2 className="section-title">The Long Road to Recovery</h2>
+            <div className="flex items-center gap-3 mb-4 title-with-icon">
+              <svg className="w-10 h-10 flex-shrink-0 icon-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+              <h2 className="section-title mb-0">The Long Road to Recovery</h2>
+            </div>
             <div className="prose section-content">
-              <div className="flex gap-4 items-start">
-                <svg className="w-10 h-10 icon-accent opacity-15 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-                <p className="flex-1">
-                  The Khmer Rouge regime ended in 1979 when Vietnamese forces invaded Cambodia. However, the aftermath left a nation devastated:
-                </p>
-              </div>
+              <p>
+                The Khmer Rouge regime ended in 1979 when Vietnamese forces invaded Cambodia. However, the aftermath left a nation devastated:
+              </p>
 
               <h3 className="text-2xl font-bold mt-6 mb-4">The Human Cost</h3>
               <ul>
@@ -187,14 +197,13 @@ export default function HistoryPage() {
       {/* Modern Challenges */}
       <section className="section-bg-dots">
         <div className="page-container">
+            <div className="flex items-center gap-3 mb-4 title-with-icon">
+              <svg className="w-10 h-10 flex-shrink-0 icon-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h2 className="section-title mb-0">Cambodia Today: Ongoing Challenges</h2>
+            </div>
             <div className="prose section-content">
-              <div className="flex items-center gap-3 mb-6">
-                <svg className="w-8 h-8 flex-shrink-0 icon-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <h2 className="section-title mb-0">Cambodia Today: Ongoing Challenges</h2>
-              </div>
-
               <h3 className="text-2xl font-bold mt-6 mb-4">Generational Trauma</h3>
               <p>
                 The effects of the genocide continue to reverberate through Cambodian society today:
@@ -253,14 +262,13 @@ export default function HistoryPage() {
       {/* Why Pastoral Support Matters */}
       <section className="section-bg-blue">
         <div className="page-container">
-            <div className="prose section-content">
-              <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-4 title-with-icon">
               <svg className="w-10 h-10 flex-shrink-0 icon-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
               <h2 className="section-title mb-0">Why Supporting Pastors Matters</h2>
             </div>
-
+            <div className="prose section-content">
             <p className="section-intro text-primary-blue">
               In this context of trauma, poverty, and spiritual hunger, the role of local pastors becomes critically important.
             </p>
@@ -370,14 +378,13 @@ export default function HistoryPage() {
       <div className="page-container">
           {/* Hope for the Future */}
           <section className="content-section">
+            <div className="flex items-center gap-3 mb-4 title-with-icon">
+              <svg className="w-10 h-10 flex-shrink-0 icon-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+              <h2 className="section-title mb-0">A Message of Hope</h2>
+            </div>
             <div className="prose section-content">
-              <div className="flex items-center gap-3 mb-6">
-                <svg className="w-10 h-10 flex-shrink-0 icon-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-                <h2 className="section-title mb-0">A Message of Hope</h2>
-              </div>
-
               <div className="image-grid image-grid-2">
                 <div className="image-grid-item">
                   <Image src="/images/about-cambodia/coh.jpg" alt="Children of Hope - New Generation" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
@@ -399,7 +406,7 @@ export default function HistoryPage() {
                   alt="Light Breaking Through - Hope for Cambodia"
                   fill
                   className="object-cover"
-                  sizes="100vw"
+                  sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px"
                 />
               </div>
 

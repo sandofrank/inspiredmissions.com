@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
           alt="Angkor Wat Cambodia"
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px"
           style={{ objectFit: 'cover' }}
         />
         <div className="hero-overlay hero-overlay-strong"></div>

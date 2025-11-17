@@ -5,21 +5,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import StructuredData from '@/components/StructuredData'
-import {
-  IconHeart,
-  IconPrayer,
-  IconCommunity,
-  IconBible,
-  IconGlobe,
-  IconStar,
-  IconHome,
-  IconGift,
-  IconHelping,
-  IconLight,
-  IconTree,
-  IconSun,
-  IconEducation
-} from '@/components/BlogIcons'
 
 const Gallery = dynamic(() => import('@/components/Gallery'), {
   loading: () => <div className="h-64 bg-gray-200 animate-pulse rounded-lg my-8" />
@@ -88,7 +73,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             fill
             priority
             className="object-cover"
-            sizes="100vw"
+            sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px"
           />
           <div className="absolute inset-0 gradient-overlay-dark z-10"></div>
           <div className="relative z-20 page-container pb-16">
@@ -152,20 +137,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <MDXRemote
             source={post.content}
             components={{
-              Gallery,
-              IconHeart,
-              IconPrayer,
-              IconCommunity,
-              IconBible,
-              IconGlobe,
-              IconStar,
-              IconHome,
-              IconGift,
-              IconHelping,
-              IconLight,
-              IconTree,
-              IconSun,
-              IconEducation
+              Gallery
             }}
           />
         </div>
