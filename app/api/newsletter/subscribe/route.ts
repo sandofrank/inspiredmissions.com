@@ -51,6 +51,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: `${RESEND_CONFIG.fromName} <${RESEND_CONFIG.fromEmail}>`,
       to: email,
+      bcc: ['fsandoval@inspiredmissions.com', 'christy@inspiredmissions.com'],
       subject: 'Welcome to Inspired Missions Newsletter',
       html: `
         <!DOCTYPE html>
