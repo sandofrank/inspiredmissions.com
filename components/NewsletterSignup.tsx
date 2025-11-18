@@ -50,7 +50,7 @@ export default function NewsletterSignup() {
         </p>
 
       <form onSubmit={handleSubmit} className="space-y-2">
-        <div className="flex flex-col sm:flex-row gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <input
             type="text"
             value={firstName}
@@ -58,7 +58,7 @@ export default function NewsletterSignup() {
             placeholder="First Name"
             required
             disabled={status === 'loading'}
-            className="flex-1 px-4 py-3 text-base rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
+            className="px-4 py-3 text-base rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
             aria-label="First name"
           />
           <input
@@ -68,9 +68,11 @@ export default function NewsletterSignup() {
             placeholder="Last Name"
             required
             disabled={status === 'loading'}
-            className="flex-1 px-4 py-3 text-base rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
+            className="px-4 py-3 text-base rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/20 transition-colors disabled:opacity-50 disabled:bg-gray-100"
             aria-label="Last name"
           />
+        </div>
+        <div className="flex flex-col sm:flex-row gap-2">
           <input
             type="email"
             value={email}
@@ -84,7 +86,7 @@ export default function NewsletterSignup() {
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="px-6 py-2 text-sm bg-gradient-to-br from-secondary to-secondary-light text-primary-dark font-bold rounded hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+            className="px-6 py-3 text-base bg-gradient-to-br from-secondary to-secondary-light text-primary-dark font-bold rounded hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
           >
             {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
           </button>
